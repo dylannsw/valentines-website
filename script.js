@@ -1,17 +1,12 @@
 document.getElementById('no-button').addEventListener('mouseover', function() {
-    const container = this.parentElement;
-    const containerRect = container.getBoundingClientRect();
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+    const maxDistance = 100; // Maximum distance from the center
 
-    const buttonWidth = this.offsetWidth;
-    const buttonHeight = this.offsetHeight;
-
-    const maxX = containerRect.width - buttonWidth;
-    const maxY = containerRect.height - buttonHeight;
-
-    const newX = Math.random() * maxX + containerRect.left;
-    const newY = Math.random() * maxY + containerRect.top;
+    const newX = centerX + (Math.random() - 0.5) * 2 * maxDistance;
+    const newY = centerY + (Math.random() - 0.5) * 2 * maxDistance;
 
     this.style.position = "absolute";
-    this.style.left = `${newX}px`;
-    this.style.top = `${newY}px`;
+    this.style.left = `${Math.max(0, Math.min(newX, window.innerWidth - this.offsetWidth))}px`;
+    this.style.top = `${Math.max(0, Math.min(newY, window.innerHeight - this.offsetHeight))}px`;
 });
