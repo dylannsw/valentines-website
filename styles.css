@@ -1,12 +1,18 @@
 body {
     text-align: center;
-    margin-top: 20%;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: Arial, sans-serif;
 }
 
 .container {
-    position: relative;
-    display: inline-block;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 button {
@@ -22,4 +28,10 @@ button {
 
 button:hover {
     background-color: #ff5788;
+}
+
+#celebration-image {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
 }
