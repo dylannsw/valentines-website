@@ -1,7 +1,9 @@
-body {
+html, body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    overflow: hidden; /* Prevents scrolling */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +14,8 @@ body {
 .container {
     text-align: center;
     max-width: 90%; /* Limiting max width */
-    margin: auto;
+    max-height: 90%; /* Limiting max height */
+    overflow: auto; /* Adds scroll inside container if needed */
 }
 
 button {
@@ -32,18 +35,7 @@ button:hover {
 
 #celebration-image {
     max-width: 100%; /* Make the image responsive */
-    height: auto;
+    max-height: 70vh; /* Adjusts the image height */
+    height: auto; /* Maintains aspect ratio */
     margin-bottom: 20px;
-}
-
-/* Responsive adjustments for 1080p screens */
-@media screen and (min-width: 1920px) {
-    .container {
-        max-width: 50%; /* Adjust width for larger screens */
-    }
-
-    button {
-        font-size: 20px;
-        padding: 15px 30px;
-    }
 }
