@@ -1,41 +1,30 @@
-html, body {
+body, html {
     margin: 0;
     padding: 0;
-    height: 100vh; /* Full viewport height */
-    width: 100vw; /* Full viewport width */
-    overflow: hidden; /* Prevents scrolling */
+    height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     font-family: Arial, sans-serif;
-    background-color: #fff;
 }
 
-.container {
+#celebration-container {
     text-align: center;
-    max-width: 90%; /* Limiting max width */
-    max-height: 90%; /* Limiting max height */
-    overflow: auto; /* Adds scroll inside container if needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #ff85a2;
-    color: white;
-}
-
-button:hover {
-    background-color: #ff5788;
+#celebration-container p {
+    font-size: 2em; /* Larger text */
+    color: #ff5788;
+    margin-top: 20px;
 }
 
 #celebration-image {
-    max-width: 100%; /* Make the image responsive */
-    max-height: 70vh; /* Adjusts the image height */
-    height: auto; /* Maintains aspect ratio */
-    margin-bottom: 20px;
+    max-width: 50%; /* Adjust size as needed */
+    height: auto;
 }
