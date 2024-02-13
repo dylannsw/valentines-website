@@ -1,17 +1,17 @@
-document.getElementById('yes-button').addEventListener('click', function() {
-    document.getElementById('question-container').style.display = 'none';
-    document.getElementById('celebration-container').style.display = 'block';
-});
-
 document.getElementById('no-button').addEventListener('mouseover', function() {
-    const container = document.querySelector('.container');
-    const maxX = container.clientWidth - this.clientWidth;
-    const maxY = container.clientHeight - this.clientHeight;
+    const container = this.parentElement;
+    const containerRect = container.getBoundingClientRect();
 
-    const newX = Math.random() * maxX;
-    const newY = Math.random() * maxY;
+    const buttonWidth = this.offsetWidth;
+    const buttonHeight = this.offsetHeight;
+
+    const maxX = containerRect.width - buttonWidth;
+    const maxY = containerRect.height - buttonHeight;
+
+    const newX = Math.random() * maxX + containerRect.left;
+    const newY = Math.random() * maxY + containerRect.top;
 
     this.style.position = "absolute";
-    this.style.left = newX + 'px';
-    this.style.top = newY + 'px';
+    this.style.left = `${newX}px`;
+    this.style.top = `${newY}px`;
 });
