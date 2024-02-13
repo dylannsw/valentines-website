@@ -1,12 +1,18 @@
 body {
-    text-align: center;
-    margin-top: 20%;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: Arial, sans-serif;
+    background-color: #fff;
 }
 
 .container {
-    position: relative;
-    display: inline-block;
+    text-align: center;
+    max-width: 90%; /* Limiting max width */
+    margin: auto;
 }
 
 button {
@@ -22,4 +28,22 @@ button {
 
 button:hover {
     background-color: #ff5788;
+}
+
+#celebration-image {
+    max-width: 100%; /* Make the image responsive */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments for 1080p screens */
+@media screen and (min-width: 1920px) {
+    .container {
+        max-width: 50%; /* Adjust width for larger screens */
+    }
+
+    button {
+        font-size: 20px;
+        padding: 15px 30px;
+    }
 }
