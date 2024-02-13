@@ -1,15 +1,9 @@
-document.getElementById('yes-button').addEventListener('click', function() {
-    document.getElementById('question-container').style.display = 'none';
-    document.getElementById('celebration-container').style.display = 'block';
-});
-
 document.getElementById('no-button').addEventListener('mouseover', function() {
-    const container = document.querySelector('.container');
-    const maxX = window.innerWidth - this.clientWidth;
-    const maxY = window.innerHeight - this.clientHeight;
+    const viewportWidth = window.innerWidth - this.offsetWidth;
+    const viewportHeight = window.innerHeight - this.offsetHeight;
 
-    const newX = Math.random() * maxX;
-    const newY = Math.random() * maxY;
+    const newX = Math.random() * viewportWidth;
+    const newY = Math.random() * viewportHeight;
 
     this.style.position = "absolute";
     this.style.left = newX + 'px';
